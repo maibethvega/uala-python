@@ -1,5 +1,5 @@
 """
-Primer programa de pruebas en Python
+Primer programa de pruebas en Python Clase 6
 """
 
 """Ejercicio 1"""
@@ -25,6 +25,9 @@ palabra4 = "prueba"
 
 print("_" + str(palabra1) + "_" + str(palabra2) + "_" + str(palabra3) + "_" + str(palabra4))
 print("")
+
+
+
 """CLASE 7 - 07/06/2022"""
 
 """Ejemplo set"""
@@ -109,12 +112,12 @@ print("")
 """Ejemplo funciones"""
 
 def suma (a, b):
-    print(a)
-    print(b)
+    print("Num1: " +str(a))
+    print("Num2: " +str(b))
     return a+b
 
 suma = suma(5, 5)
-print(suma)
+print("La suma es: " +str(suma))
 
 print("Fin funciones")
 print("")
