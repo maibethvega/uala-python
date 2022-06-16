@@ -1,8 +1,7 @@
 """Practica Clase 8 - 09/06/2022"""
 
 """Generar una clase alumnos que pida en el constructor algunos datos de los mismos, 
-algunos atributos obligatorios son nombre, notas, el cual será un array con al menos 5 valores 
-y desviación estándar"""
+algunos atributos obligatorios son nombre, notas, el cual será un array con al menos 5 valores y desviación estándar"""
 
 class Alumno:
     cont = 0
@@ -31,22 +30,25 @@ def promedio_nota(notas):
         x += 0
         sumaNotas = sumaNotas + x
         promedio_nota = sumaNotas / len(notas)
-
     print("Promedio de las notas: " + str(promedio_nota))
+
 
 """4.- Generar método traiga la nota más alta"""
 def mayor_nota(notas):
     print("La Mayor nota es: " + str(max(notas)))
 
+
 """5 Generar método que elija al estudiante con mejor promedio, en caso de empate al que tenga menor desviación"""
 def mejor_promedio(notas):
-    return "Hola"
+    print("El mejor promedio es: " + str(max(promedio_nota(notas))))
 
-alum1 = Alumno("Maibeth", 19090953, "Ingles", {7, 6, 8, 9, 5})
-alum2 = Alumno("Leonel", 38470822, "Ingles", {9, 10, 7, 6, 8})
-alum3 = Alumno("Noe", 95784587, "Ingles", {4, 3, 5, 7, 4})
-alum4 = Alumno("Marfre", 96784587, "Ingles", {8, 7, 4, 3, 5})
-alum5 = Alumno("Mario", 33478956, "Ingles", {10, 10, 10, 10, 10})
+
+"""Alumnos"""
+alum1 = Alumno("Maibeth", 19090953, "Ingles", [7, 6, 8, 9, 5])
+alum2 = Alumno("Leonel", 38470822, "Ingles", [9, 10, 7, 6, 8])
+alum3 = Alumno("Noe", 95784587, "Ingles", [4, 3, 5, 7, 4])
+alum4 = Alumno("Marfre", 96784587, "Ingles", [8, 7, 4, 3, 5])
+alum5 = Alumno("Mario", 33478956, "Ingles", [10, 10, 10, 10, 10])
 
 print("Datos de los Alumnos:")
 print(alum1.dar_info())
@@ -68,3 +70,4 @@ print("")
 print(alum5.dar_info())
 promedio_nota(alum5.notas)
 mayor_nota(alum5.notas)
+print("")
