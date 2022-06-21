@@ -39,13 +39,8 @@ class Alumno:
 
 
 # 5 Generar método que elija al estudiante con mejor promedio, en caso de empate al que tenga menor desviación"""
-def mejorPromedio(lista_de_promedios: list):
-    mayor_promedio = None
-    i = 0
-    for i in lista_de_promedios:
-        if (mayor_promedio is None or i > mayor_promedio):
-            mayor_promedio = i
-    return mayor_promedio
+def estudianteMejorPromedio(lista_de_promedios: list):
+    return max(lista_de_promedios)
 
 # 6.- Generar método que elija al estudiante con mejor nota
 def estudianteMejorNota(lista_de_notas: list):
@@ -83,6 +78,13 @@ print("La mayor nota es: " + str(alum5.mayor_nota))
 print("")
 
 lista_de_promedios = [alum1.promedio, alum2.promedio, alum3.promedio, alum4.promedio, alum5.promedio]
-lista_de_notas = [alum1.notas, alum2.notas, alum3.notas, alum4.notas, alum5.notas]
-print(mejorPromedio(lista_de_promedios))
-print(estudianteMejorNota(lista_de_notas))
+lista_de_notas = [alum1.mayor_nota, alum2.mayor_nota, alum3.mayor_nota, alum4.mayor_nota, alum5.mayor_nota]
+lista_de_nombres = [alum1.name, alum2.name, alum3.name, alum4.name, alum5.name]
+a = lista_de_promedios.index(estudianteMejorPromedio(lista_de_promedios))
+b = estudianteMejorPromedio(lista_de_promedios)
+c = lista_de_notas.index(estudianteMejorNota(lista_de_notas))
+d = estudianteMejorNota(lista_de_notas)
+print("+ El estudiante con Mejor Promedio es: " + lista_de_nombres[a] + ", con: " + str(b))
+print("+ El estudiante con Mejor Nota es: " + lista_de_nombres[c] + ", con: " + str(d))
+
+
